@@ -1,14 +1,18 @@
 import style from "./Header.module.scss";
+import {Link} from "react-router-dom";
 
 const Header = ({onOpenCart}) => {
     return(
         <div className={style.headerWrapper}>
             <div className={style.headerLeft}>
-                <img className={style.logo} src='/img/logo.png'/>
-                <div className={style.logoName}>
-                    <h2>sneakers shop</h2>
-                    <p>Магазин лучших кроссовок</p>
-                </div>
+                <Link to='/' className={style.logoWrapper}>
+                    <img className={style.logo} src='/img/logo.png' alt='logo'/>
+                    <div className={style.logoName}>
+                        <h2>sneakers shop</h2>
+                        <p>Магазин лучших кроссовок</p>
+                    </div>
+                </Link>
+
             </div>
             <div className={style.headerRight}>
                 <div
@@ -17,7 +21,11 @@ const Header = ({onOpenCart}) => {
                     <i className="fas fa-shopping-cart"></i>
                     <span>1200 грн</span>
                 </div>
-                <i className="fas fa-heart"></i>
+
+                <Link to='/favorite'>
+                    <i className="fas fa-heart"></i>
+                </Link>
+
                 <i className="fas fa-user-circle"></i>
             </div>
         </div>
