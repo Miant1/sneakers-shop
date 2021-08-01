@@ -157,6 +157,11 @@
 
                 transition: background 0.2s ease-in-out;
 
+                &:disabled{
+                    background: #bebebe;
+                    cursor: default;
+                }
+
                 &:hover{
                     background: #97cd55;
 
@@ -174,90 +179,6 @@
 
                     transform: translate(0, -50%);
                     transition: right 0.3s ease-in-out;
-                }
-            }
-        }
-    }
-    .emptyDrawer{
-
-        width: 385px;
-        height: 100%;
-
-        background: #fff;
-        padding: 30px;
-
-        position: absolute;
-        top: 0;
-        right: 0;
-
-        .title{
-            font-size: 24px;
-            font-weight: 700;
-            line-height: 27px;
-            color: #000;
-        }
-        .content{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100%;
-            width: 100%;
-
-            padding-bottom: 60px;
-
-            img{
-                margin-bottom: 21px;
-            }
-            h3{
-                font-size: 22px;
-                line-height: 27px;
-                font-weight: 600;
-                margin-bottom: 9px;
-            }
-            p{
-                font-size: 16px;
-                line-height: 24px;
-                text-align: center;
-                color: rgba(0, 0, 0, 0.4);
-
-                margin-bottom: 40px;
-            }
-
-            .comeBack{
-                width: 245px;
-                height: 55px;
-
-                font-size: 16px;
-                font-weight: 600;
-                line-height: 20px;
-                color: #fff;
-
-                position: relative;
-                border: none;
-                border-radius: 18px;
-                background: #9DD458;
-                cursor: pointer;
-
-                transition: background 0.2s ease-in-out;
-
-                &:hover{
-                    background: #97cd55;
-
-                    i{
-                        left: 20px;
-                    }
-                }
-
-                i{
-                    font-size: 18px;
-
-                    position: absolute;
-                    top: 50%;
-                    left: 30px;
-
-                    transform: translate(0, -50%);
-                    transition: left 0.3s ease-in-out;
                 }
             }
         }

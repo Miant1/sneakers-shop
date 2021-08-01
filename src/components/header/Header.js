@@ -1,7 +1,11 @@
 import style from "./Header.module.scss";
 import {Link} from "react-router-dom";
+import {useCart} from "../../hooks/useCart";
 
 const Header = ({onOpenCart}) => {
+
+    const {totalPrice} = useCart()
+
     return(
         <div className={style.headerWrapper}>
             <div className={style.headerLeft}>
@@ -19,7 +23,7 @@ const Header = ({onOpenCart}) => {
                     className={style.cart}
                     onClick={onOpenCart}>
                     <i className="fas fa-shopping-cart"></i>
-                    <span>1200 грн</span>
+                    <span>{totalPrice} грн</span>
                 </div>
 
                 <Link to='/favorite'>
