@@ -30,7 +30,10 @@ const Header = ({onOpenCart}) => {
                     <i className="fas fa-heart"></i>
                 </Link>
 
-                <i className="fas fa-user-circle"></i>
+                <Link to='/orders'>
+                    <i className="fas fa-user-circle"></i>
+                </Link>
+
             </div>
         </div>
     )

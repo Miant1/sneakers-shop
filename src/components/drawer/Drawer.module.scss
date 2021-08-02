@@ -9,6 +9,10 @@
     left: 0;
     z-index: 5;
 
+    visibility: hidden;
+
+    transition: visibility 0.1s ease-in-out;
+
     .drawer{
         display: flex;
         flex-direction: column;
@@ -20,7 +24,10 @@
 
         position: absolute;
         top: 0;
-        right: 0;
+        left: auto;
+        right: -100%;
+
+        transition: right 0.5s ease-in-out;
 
         .header{
             display: flex;
@@ -182,5 +189,12 @@
                 }
             }
         }
+    }
+}
+.drawerWrapperVis{
+    visibility: visible;
+
+    .drawer{
+        right: 0;
     }
 }

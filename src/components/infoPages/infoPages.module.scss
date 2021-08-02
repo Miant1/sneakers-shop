@@ -44,6 +44,7 @@
         cursor: pointer;
 
         transition: background 0.2s ease-in-out;
+        margin: 0 auto;
 
         &:hover{
             background: #97cd55;
@@ -62,6 +63,14 @@
 
             transform: translate(0, -50%);
             transition: left 0.3s ease-in-out;
+        }
+        span{
+            width: auto;
+            position: absolute;
+            top: 50%;
+            left: 65px;
+
+            transform: translate(0, -50%);
         }
     }
 }

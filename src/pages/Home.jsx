@@ -1,4 +1,4 @@
-import style from "./Home.module.scss";
+import style from "./Pages.module.scss";
 import Card from "../components/card/Card";
 import {useState} from "react";
 

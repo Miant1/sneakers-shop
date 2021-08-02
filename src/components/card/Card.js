@@ -15,13 +15,14 @@ const Card = ({
 
     const [isFavorite, setIsFavorite] = useState(favorited);
     const {isItemAdded} = useContext(AppContext);
+    const obj = {id, parentId: id, title, price, imageUrl}
 
     const onClickPlus = () =>{
-        onAddToCart({id, title, price, imageUrl});
+        onAddToCart(obj);
     }
     const onAddToFav = () => {
         setIsFavorite(!isFavorite);
-        onClickFavorite({id, title, price, imageUrl})
+        onClickFavorite(obj)
     }
     return(
         <div className={style.item}>
@@ -44,11 +45,12 @@ const Card = ({
                     :
                     <>
                         <div className={style.favorite}>
-                            <img
+                            {onClickFavorite && <img
                                 className={style.like}
                                 src={isFavorite ? "/img/liked-icon.svg" : "/img/unliked-icon.svg"}
                                 alt="unliked"
                                 onClick={onAddToFav}/>
+                            }
                         </div>
                         <img className={style.mainImg} src={imageUrl} alt="sneaker"/>
                         <p className={style.info}>{title}</p>
@@ -57,11 +59,12 @@ const Card = ({
                                 <p>цена:</p>
                                 <span>{price} грн.</span>
                             </div>
-                            <img
+                            {onAddToCart && <img
                                 className={style.addBtn}
                                 onClick={onClickPlus}
                                 src={isItemAdded(id) ? '/img/added-icon.svg' : '/img/add-icon.svg'}
                                 alt="add"/>
+                            }
                         </div>
                     </>
             }
