@@ -10,7 +10,7 @@ const Header = ({onOpenCart}) => {
         <div className={style.headerWrapper}>
             <div className={style.headerLeft}>
                 <Link to='/' className={style.logoWrapper}>
-                    <img className={style.logo} src='/img/logo.png' alt='logo'/>
+                    <img className={style.logo} src='img/logo.png' alt='logo'/>
                     <div className={style.logoName}>
                         <h2>sneakers shop</h2>
                         <p>Магазин лучших кроссовок</p>

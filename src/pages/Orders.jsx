@@ -47,7 +47,7 @@ const Orders = () => {
                 </div>
             :
                 <InfoPages
-                    imgUrl='/img/noorders-icon.png'
+                    imgUrl='img/noorders-icon.png'
                     title='У вас нет заказов :('
                     info='У вас нет оформленных заказов.'
                 />

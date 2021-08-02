@@ -42,7 +42,7 @@ const Drawer = ({onCloseCart, items, onRemove, opened}) => {
                             <h3 className={style.title}>Корзина</h3>
                             <img
                                 className={style.close}
-                                src="/img/close-icon.svg"
+                                src="img/close-icon.svg"
                                 alt="close"
                                 onClick={onCloseCart}/>
                         </div>
@@ -58,7 +58,7 @@ const Drawer = ({onCloseCart, items, onRemove, opened}) => {
                                         <img
                                             className={style.cancel}
                                             onClick={() => onRemove(item.id)}
-                                            src="/img/close-icon.svg"
+                                            src="img/close-icon.svg"
                                             alt="close"/>
                                     </div>
                                 ))
@@ -86,7 +86,7 @@ const Drawer = ({onCloseCart, items, onRemove, opened}) => {
                     <InfoCart
                     title={isOrderComplete ? 'Заказ оформлен!' : 'Корзина пустая'}
                     description={isOrderComplete ? `Ваш заказ #${orderId} скоро будет передан курьерской доставке` : 'Добавьте хотя бы одну пару кроссовок, чтобы сделать заказ.'}
-                    image={isOrderComplete ? "/img/order-done.png" : "/img/empty-cart.png"}
+                    image={isOrderComplete ? "img/order-done.png" : "img/empty-cart.png"}
                     setIsOrderComplete={setIsOrderComplete}
                     />
                 }

@@ -34,7 +34,7 @@ const Favorite = () => {
                 </>
                 :
                 <InfoPages
-                imgUrl='/img/nofavorite-icon.png'
+                imgUrl='img/nofavorite-icon.png'
                 title='Закладок нет :('
                 info='Вы ничего не добавляли в закладки'/>
             }
